@@ -31,12 +31,12 @@ public class Wizard implements Lockable{
 	 * usage. This is the preferred constructor.
 	 * @param name
 	 */
-	public Wizard(String name, int health, int key, boolean locked) {
+	public Wizard(String name) {
 	super();
 	this.setName(name);
-	this.setKey(key);
-	this.setHealth(health);
-	this.locked = locked;
+	this.key = 0;
+	this.health = 100;
+	this.locked = false
 	
 
 	}//end constructor
@@ -49,7 +49,7 @@ public class Wizard implements Lockable{
 	 * @param power
 	 */
 	public void takeDamage(int power) {
-			//if (isLocked() != locked)
+			if (isLocked() == false)
 			health = health - power;
 	}//end takeDamage
 	
