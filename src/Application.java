@@ -30,6 +30,10 @@ public class Application {
 		W2.lock(15);
 		System.out.println(W2.toString());
 		
+		//implement takedamage() to prove it will not work when locked eqauls true
+		W2.takeDamage(50);
+		System.out.println(W2.toString());
+		
 		//implement unlock method that does not match the key to prove it will not unlock unless it matches
 		W2.unlock(1);
 		System.out.println(W2.toString());
